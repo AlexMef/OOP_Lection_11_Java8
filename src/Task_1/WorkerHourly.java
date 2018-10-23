@@ -1,3 +1,5 @@
+package Task_1;
+
 public class WorkerHourly implements Worker {
     private String name;
     private int hoursCount;

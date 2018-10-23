@@ -1,3 +1,5 @@
+package Task_1;
+
 public class WorkerFixed implements Worker {
     private String name;
     private double fixedPayment;

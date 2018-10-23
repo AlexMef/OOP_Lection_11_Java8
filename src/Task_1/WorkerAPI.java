@@ -1,7 +1,9 @@
+package Task_1;
+
 import java.io.*;
 import java.util.ArrayList;
 
-public class Main {
+public class WorkerAPI {
     public static void main(String[] args) {
         ArrayList<Worker> arrayList = new ArrayList<>();
         WorkerFixed worker1 = new WorkerFixed("Peter", 1300, 100);
