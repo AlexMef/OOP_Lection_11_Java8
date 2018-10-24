@@ -1,30 +1,40 @@
 package Task_1;
 
 public class WorkerHourly implements Worker {
+    private int ID;
     private String name;
-    private int hoursCount;
+//    private int hoursCount;
     private double hourlyPayment;
 
-    WorkerHourly(String name, int hoursCount, double hourlyPayment) {
+    WorkerHourly(int ID, String name, double hourlyPayment) {
+        this.ID = ID;
         this.name = name;
-        this.hoursCount = hoursCount;
+//        this.hoursCount = hoursCount;
         this.hourlyPayment = hourlyPayment;
     }
 
-    public int getHoursCount() {
-        return hoursCount;
-    }
+//    public int getHoursCount() {
+//        return hoursCount;
+//    }
+//
+//    public void setHoursCount(int hoursCount) {
+//        this.hoursCount = hoursCount;
+//    }
 
-    public void setHoursCount(int hoursCount) {
-        this.hoursCount = hoursCount;
-    }
-
-    public double getHourlyPayment() {
+    double getHourlyPayment() {
         return hourlyPayment;
     }
 
-    public void setHourlyPayment(double hourlyPayment) {
+    void setHourlyPayment(double hourlyPayment) {
         this.hourlyPayment = hourlyPayment;
+    }
+
+    int getID() {
+        return ID;
+    }
+
+    void setID(int ID) {
+        this.ID = ID;
     }
 
     @Override
@@ -44,6 +54,6 @@ public class WorkerHourly implements Worker {
 
     @Override
     public String toString() {
-        return getName() + "  " + getPayment();
+        return getID() + "  " +  getName() + "  " + getPayment();
     }
 }

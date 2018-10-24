@@ -1,30 +1,40 @@
 package Task_1;
 
 public class WorkerFixed implements Worker {
+    private int ID;
     private String name;
     private double fixedPayment;
     private double reward;
 
-    WorkerFixed(String name, double fixedPayment, double reward){
+    WorkerFixed(int ID, String name, double fixedPayment, double reward){
+        this.ID = ID;
         this.name = name;
         this.fixedPayment = fixedPayment;
         this.reward = reward;
     }
 
-    public double getFixedPayment() {
+    double getFixedPayment() {
         return fixedPayment;
     }
 
-    public void setFixedPayment(double fixedPayment) {
+    void setFixedPayment(double fixedPayment) {
         this.fixedPayment = fixedPayment;
     }
 
-    public double getReward() {
+    double getReward() {
         return reward;
     }
 
-    public void setReward(double reward) {
+    void setReward(double reward) {
         this.reward = reward;
+    }
+
+    int getID() {
+        return ID;
+    }
+
+    void setID(int ID) {
+        this.ID = ID;
     }
 
     @Override
@@ -44,6 +54,6 @@ public class WorkerFixed implements Worker {
 
     @Override
     public String toString() {
-        return getName() + "  " + getPayment();
+        return getID() + "  " + getName() + "  " + getPayment();
     }
 }
